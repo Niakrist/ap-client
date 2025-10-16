@@ -1,0 +1,19 @@
+.label {
+  color: var(--gray-50);
+}
+
+.inputField {
+  padding: 6px 12px;
+  border-radius: 6px;
+  outline: 1px solid var(--transparent);
+  border: 1px solid var(--gray-600);
+  display: block;
+  background-color: var(--black);
+  transition: outline 0.3s ease;
+}
+
+.inputField:hover,
+.inputField:active,
+.inputField:focus {
+  outline: 1px solid var(--gray-300);
+}
