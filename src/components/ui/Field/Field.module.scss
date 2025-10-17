@@ -4,6 +4,7 @@
 
 .inputField {
   padding: 6px 12px;
+  color: var(--gray-50);
   border-radius: 6px;
   outline: 1px solid var(--transparent);
   border: 1px solid var(--gray-600);
@@ -15,5 +16,5 @@
 .inputField:hover,
 .inputField:active,
 .inputField:focus {
-  outline: 1px solid var(--gray-300);
+  outline: 1px solid var(--gray-200);
 }

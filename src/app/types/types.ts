@@ -13,6 +13,6 @@ export enum UserRole {
 }
 
 // Pick -> Забираем email и добавляем password
-export interface IAuthFromData extends Pick<IUser, "email"> {
+export interface IAuthFormData extends Pick<IUser, "email"> {
   password: string;
 }
