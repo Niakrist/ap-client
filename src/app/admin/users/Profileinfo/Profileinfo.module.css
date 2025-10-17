@@ -1,0 +1,26 @@
+.profileinfo {
+  margin-bottom: 32px;
+  display: flex;
+  gap: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.logOut {
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: color 0.3s;
+}
+
+.logOut:hover {
+  color: var(--gray-100);
+}

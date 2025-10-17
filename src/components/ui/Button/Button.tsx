@@ -8,7 +8,7 @@ interface IButtonProps
     HTMLButtonElement
   > {
   children: React.ReactNode;
-  variant: "prmary" | "secondary" | "disabled";
+  variant: "primary" | "secondary" | "disabled";
   isCircle?: boolean;
 }
 

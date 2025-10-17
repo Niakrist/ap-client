@@ -1,5 +1,5 @@
 import { axiosClassic, instance } from "@/api/axios";
-import { IAuthFromData, IUser } from "@/app/types/types";
+import { IAuthFormData, IUser } from "@/app/types/types";
 import { removeFromStorage, saveTokenStorage } from "./auth.helpers";
 
 interface IAuthResponse {
@@ -8,8 +8,11 @@ interface IAuthResponse {
 }
 
 class AuthServices {
-  async main(type: "login" | "register", data: IAuthFromData) {
-    const response = await axiosClassic.post<IAuthResponse>(`/auth/${type}`, data);
+  async main(type: "login" | "register", data: IAuthFormData) {
+    const response = await axiosClassic.post<IAuthResponse>(
+      `/auth/${type}`,
+      data,
+    );
 
     if (response.data.accessToken) {
       saveTokenStorage(response.data.accessToken);
@@ -18,7 +21,9 @@ class AuthServices {
   }
 
   async getNewTokens() {
-    const response = await axiosClassic.post<IAuthResponse>("/auth/login/access-token");
+    const response = await axiosClassic.post<IAuthResponse>(
+      "/auth/login/access-token",
+    );
 
     if (response.data.accessToken) {
       saveTokenStorage(response.data.accessToken);

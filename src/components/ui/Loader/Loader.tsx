@@ -20,7 +20,11 @@ export const Loader = () => {
         strokeWidth="8"
         initial={{ opacity: 0.5 }}
         animate={{ opacity: [0.5, 1, 0.5], scale: [1, 1.1, 1] }}
-        transition={{ repeat: Infinity, duration: 1.3, ease: "easeInOut" }}
+        transition={{
+          repeat: Infinity,
+          duration: 1.3,
+          ease: "easeInOut",
+        }}
       />
       <motion.circle
         cx="32"
@@ -30,7 +34,11 @@ export const Loader = () => {
         strokeWidth="8"
         initial={{ scale: 1 }}
         animate={{ scale: [1, 1.1, 1] }}
-        transition={{ repeat: Infinity, duration: 1.3, ease: "easeInOut" }}
+        transition={{
+          repeat: Infinity,
+          duration: 1.3,
+          ease: "easeInOut",
+        }}
       />
     </motion.svg>
   );
