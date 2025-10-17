@@ -2,11 +2,14 @@ import { API_URL } from "@/constants/main.constants";
 import type { CreateAxiosDefaults } from "axios";
 import { errorCatch, getContentType } from "./api.helper";
 import axios from "axios";
-import { getAccesToken, removeFromStorage } from "@/services/auth/auth.helpers";
+import {
+  getAccesToken,
+  removeFromStorage,
+} from "@/services/auth/auth.helpers";
 import authService from "@/services/auth/auth.service";
 
 const axiosOptions: CreateAxiosDefaults = {
-  baseURL: API_URL,
+  baseURL: "http://localhost:4000/api",
   headers: getContentType(),
   withCredentials: true,
 };
@@ -33,7 +36,9 @@ instance.interceptors.response.use(
     if (
       error.response.status === 401 ||
       errorCatch(error) === "jwt expired" ||
-      (errorCatch(error) === "jwt must be provided" && error.config && !error.config._isRetry)
+      (errorCatch(error) === "jwt must be provided" &&
+        error.config &&
+        !error.config._isRetry)
     ) {
       originalRequest._isRetry === true;
 
