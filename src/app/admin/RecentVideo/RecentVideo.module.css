@@ -1,0 +1,27 @@
+.title {
+  margin-bottom: 8px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--gray-500);
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--gray-400);
+  }
+
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
