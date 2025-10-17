@@ -6,6 +6,7 @@ import { MainChart } from "./admin/charts/MainChart/MainChart";
 import { RadarChart } from "./admin/charts/RadarChart/RadarChart";
 import { NumbersChart } from "./admin/charts/NumbersChart/NumbersChart";
 import { RecentVideo } from "./admin/RecentVideo/RecentVideo";
+import { ManagerUser } from "./admin/users/(form)/ManagerUser";
 
 export default function Home() {
   const { user, isLoading } = useProfile();
@@ -20,6 +21,7 @@ export default function Home() {
       <div>
         <RadarChart />
         <RecentVideo />
+        <ManagerUser />
       </div>
     </main>
   );
