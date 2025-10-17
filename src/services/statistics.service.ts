@@ -14,16 +14,22 @@ export interface ICountryCount {
 class StatisticsService {
   private base = "/statistics";
 
-  async getRegistrationsByMont() {
-    return instance.get<IUserRegistrationsByMonth[]>(`${this.base}/registrations-by-month`);
+  async getRegistrationsByMonth() {
+    return instance.get<IUserRegistrationsByMonth[]>(
+      `${this.base}/registrations-by-month`,
+    );
   }
 
   async getNumbers() {
-    return instance.get<{ name: string; value: string }>(`${this.base}/numbers`);
+    return instance.get<{ name: string; value: string }[]>(
+      `${this.base}/numbers`,
+    );
   }
 
   async getCountByCountry() {
-    return instance.get<ICountryCount[]>(`${this.base}/count-by-country`);
+    return instance.get<ICountryCount[]>(
+      `${this.base}/count-by-country`,
+    );
   }
 }
 
