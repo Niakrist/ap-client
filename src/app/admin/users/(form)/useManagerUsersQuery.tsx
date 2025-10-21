@@ -1,3 +1,4 @@
+import { useDebounce } from "@/hooks/useDebounse";
 import userServices from "@/services/user.services";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
@@ -5,12 +6,13 @@ import { useEffect, useState } from "react";
 export const useManagerUsersQuery = () => {
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const { debounceValue } = useDebounce(searchTerm, 1000);
 
-  const { data, isPending, refetch, fetchStatus } = useQuery({
-    queryKey: ["users", searchTerm],
+  const { data, isPending, refetch } = useQuery({
+    queryKey: ["users", debounceValue],
     queryFn: () => {
       return userServices.getUsers({
-        searchTerm,
+        searchTerm: debounceValue,
         skip: 0,
         take: page * 10,
       });
