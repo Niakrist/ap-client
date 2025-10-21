@@ -15,7 +15,7 @@ export interface IQueriesResult {
   onSubmit: SubmitHandler<IUserFormState>;
 }
 
-export interface IUserFormState {
+export interface IUserForm {
   type: TypeUserForm;
   id?: string;
   queriesResult: IQueriesResult;

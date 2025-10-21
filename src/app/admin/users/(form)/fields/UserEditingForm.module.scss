@@ -1,0 +1,11 @@
+.userEdition {
+  padding: 24px;
+}
+
+.sizeForm {
+  margin-top: 20px;
+
+  @media (min-width: 1024px) {
+    margin-top: 40px;
+  }
+}
