@@ -9,6 +9,7 @@ import { Field } from "@/components/ui/Field/Field";
 import Skeleton from "react-loading-skeleton";
 import { DashboardTable } from "@/components/ui/Dashboard/DashboardTable";
 import Image from "next/image";
+import { ManagerUserShowMore } from "./ManagerUserShowMore";
 
 interface IUserTable
   extends Pick<IUser, "id" | "email" | "country" | "avatarUrl">,
@@ -90,6 +91,9 @@ export const ManagerUser = () => {
             })) || []
           }
         ></DashboardTable>
+      )}
+      {isHasMore && (
+        <ManagerUserShowMore setPage={setPage} loading={isPending} />
       )}
     </div>
   );
