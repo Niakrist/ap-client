@@ -6,7 +6,7 @@ export const UserFromHeading = ({
   email,
 }: {
   type: TypeUserForm;
-  email: string;
+  email?: string;
 }) => {
   switch (type) {
     case "create":
