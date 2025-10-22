@@ -2,7 +2,6 @@ import React, { CSSProperties } from "react";
 import styles from "./UploadField.module.scss";
 import { FieldError } from "react-hook-form";
 import { useUploadFile } from "./useUploadFile";
-import { div } from "framer-motion/client";
 import Skeleton from "react-loading-skeleton";
 import Image from "next/image";
 

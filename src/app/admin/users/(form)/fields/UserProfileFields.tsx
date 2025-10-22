@@ -34,7 +34,7 @@ export const UserProfileFields = ({
                 onChange={onChange}
                 value={value}
                 error={error}
-                folder="user"
+                folder="users"
                 placeholder="Avatar"
               />
             );
