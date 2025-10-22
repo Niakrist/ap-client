@@ -6,6 +6,7 @@ import UserEditingForm from "./UserEditingForm";
 
 const UserForm = ({ type, id }: Pick<IUserForm, "id" | "type">) => {
   const result = useUserQueries(id, type === "create");
+
   return (
     <UserEditingForm queriesResult={result} type={type} id={id} />
   );
