@@ -10,8 +10,6 @@ export const useDebounce = <T>(
 ): IDebounceValue<T> => {
   const [debounceValue, setDebounceValue] = useState<T>(value);
 
-  console.log("value: ", value);
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setDebounceValue(value);

@@ -9,6 +9,7 @@ interface IAuthResponse {
 
 class AuthServices {
   async main(type: "login" | "register", data: IAuthFormData) {
+    console.log("data: ", data);
     const response = await axiosClassic.post<IAuthResponse>(
       `/auth/${type}`,
       data,

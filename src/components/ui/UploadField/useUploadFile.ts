@@ -37,10 +37,10 @@ export const useUploadFile: TypeUpload = (onChange, folder) => {
 
       try {
         const files = e.target.files;
+
         if (!files?.length) return;
         const formData = new FormData();
-
-        formData.append("file", files[0]);
+        formData.append("media", files[0]);
 
         await mutateAsync(formData);
       } catch (error) {
